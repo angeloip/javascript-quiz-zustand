@@ -34,10 +34,10 @@ const Question = ({ info }: { info: QuestionType }) => {
             key={index}
             disabled={info.userSelectedAnswer != null}
             onClick={handleClick(index)}
-            className={`${getBackgroundColor(info, index)} px-3 py-2 ${
-              info.userSelectedAnswer == null &&
-              'hover:bg-zinc-600 transition-colors'
-            }  ${
+            className={`${getBackgroundColor(
+              info,
+              index
+            )} px-3 py-2 enabled:hover:bg-slate-600 enabled:transition-colors ${
               index < info.answers.length - 1 && 'border-b border-b-gray-600'
             }`}
           >
